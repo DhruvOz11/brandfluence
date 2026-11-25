@@ -1,0 +1,107 @@
+.account-menu {
+  position: relative;
+}
+
+.account-menu-trigger {
+  align-items: center;
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  color: #3157a4;
+  cursor: pointer;
+  display: inline-flex;
+  height: 46px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  width: 46px;
+}
+
+.account-menu-trigger.brand {
+  border-radius: 12px;
+}
+
+.account-menu-trigger img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.account-menu-trigger svg {
+  height: 29px;
+  width: 29px;
+}
+
+.account-menu-panel {
+  background: #fff;
+  border: 1px solid #dbe2ed;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+  color: #263650;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.6rem);
+  width: min(280px, calc(100vw - 2rem));
+  z-index: 20;
+}
+
+.account-menu-panel form {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.account-menu-panel label {
+  font-weight: 700;
+}
+
+.account-menu-panel input[type="file"] {
+  max-width: 100%;
+  font-size: 0.85rem;
+}
+
+.account-menu-panel small {
+  color: #64748b;
+}
+
+.account-menu-panel button {
+  align-items: center;
+  background: #3157a4;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  gap: 0.5rem;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.6rem 0.8rem;
+}
+
+.account-menu-panel button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.account-menu-panel .account-menu-logout {
+  background: #f1f5f9;
+  color: #263650;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.account-menu-error,
+.account-menu-success {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.account-menu-error {
+  color: #a61b1b;
+}
+
+.account-menu-success {
+  color: #176b3a;
+}

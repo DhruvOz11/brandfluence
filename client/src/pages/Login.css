@@ -1,0 +1,92 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+
+  .login-form button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.15rem 0 0.35rem;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  .login-form .remember-me input {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .session-hint {
+    margin: 0 0 1rem;
+    color: #626b78;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .auth-message {
+    margin: 0 0 1rem;
+    line-height: 1.4;
+  }
+
+  .auth-message.error {
+    color: #a61b1b;
+  }
+
+  .auth-message.success {
+    color: #176b3a;
+  }
+
+  .auth-link {
+    align-self: flex-end;
+    margin-top: 1rem;
+    color: #0056b3;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }

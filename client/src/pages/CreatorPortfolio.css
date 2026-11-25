@@ -1,0 +1,336 @@
+.creator-portfolio-page {
+  min-height: 100vh;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: #f5f7fb;
+  color: #1d2735;
+}
+
+.creator-portfolio-header,
+.portfolio-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.creator-portfolio-header {
+  max-width: 1100px;
+  margin: 0 auto 1.5rem;
+}
+
+.creator-portfolio-header h1,
+.portfolio-panel h2 {
+  margin: 0.15rem 0 0.5rem;
+}
+
+.creator-portfolio-header p,
+.portfolio-section-heading p {
+  margin: 0;
+  color: #657187;
+}
+
+.portfolio-eyebrow {
+  color: #526da6 !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.portfolio-back-link {
+  color: #3157a4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.portfolio-panel {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(27, 44, 75, 0.07);
+}
+
+.profile-image-editor {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.profile-image-editor > img {
+  width: 112px;
+  height: 112px;
+  border: 1px solid #d8deea;
+  border-radius: 12px;
+  background: #f1f5f9;
+  object-fit: contain;
+}
+
+.profile-image-editor form {
+  display: grid;
+  justify-items: start;
+  gap: 0.55rem;
+}
+
+.profile-image-editor h3,
+.profile-image-editor p {
+  margin: 0;
+}
+
+.profile-image-editor p {
+  color: #657187;
+}
+
+.profile-image-editor label {
+  display: grid;
+  gap: 0.35rem;
+  color: #39465b;
+  font-weight: 600;
+}
+
+.profile-image-editor button {
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #3157a4;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-image-editor button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.creator-profile-form,
+.portfolio-upload-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.creator-profile-form label,
+.portfolio-upload-form label,
+.creator-manage-card label {
+  display: grid;
+  gap: 0.45rem;
+  color: #39465b;
+  font-weight: 600;
+}
+
+.creator-profile-form input,
+.creator-profile-form textarea,
+.portfolio-upload-form input:not([type="file"]),
+.creator-manage-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid #ccd4e0;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.creator-profile-form textarea {
+  resize: vertical;
+}
+
+.verification-request-form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  max-width: 760px;
+}
+
+.verification-request-form label {
+  color: #39465b;
+  font-weight: 600;
+}
+
+.verification-request-form textarea {
+  box-sizing: border-box;
+  font: inherit;
+  min-height: 100px;
+  padding: 0.75rem;
+  resize: vertical;
+  width: 100%;
+}
+
+.verification-request-form button {
+  justify-self: start;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #3157a4;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.verification-request-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.verification-status {
+  align-self: flex-start;
+  background: #f1f5f9;
+  border-radius: 999px;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 0.7rem;
+  white-space: nowrap;
+}
+
+.verification-status.approved {
+  background: #e7f6ec;
+  color: #176b3a;
+}
+
+.verification-decision-reason {
+  background: #f8fafc;
+  border-left: 3px solid #3157a4;
+  color: #475569;
+  padding: 0.75rem;
+}
+
+.creator-profile-form small {
+  color: #657187;
+  font-weight: 400;
+}
+
+.portfolio-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.creator-profile-form button,
+.portfolio-upload-form button {
+  justify-self: start;
+  padding: 0.75rem 1.2rem;
+  border: 0;
+  border-radius: 8px;
+  background: #3157a4;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.creator-profile-form button:disabled,
+.portfolio-upload-form button:disabled,
+.portfolio-item-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.portfolio-upload-form {
+  grid-template-columns: minmax(220px, 1.2fr) minmax(220px, 1fr) auto;
+  align-items: end;
+}
+
+.portfolio-upload-form input[type="file"] {
+  max-width: 100%;
+}
+
+.portfolio-section-heading {
+  margin-bottom: 1rem;
+}
+
+.portfolio-section-heading > span {
+  color: #526da6;
+  font-weight: 700;
+}
+
+.creator-manage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.creator-manage-card {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border: 1px solid #e1e6ee;
+  border-radius: 12px;
+}
+
+.creator-manage-card img,
+.creator-manage-card video {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #e7ebf2;
+}
+
+.portfolio-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.portfolio-item-actions button {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #ccd4e0;
+  border-radius: 7px;
+  background: #fff;
+  color: #263650;
+  cursor: pointer;
+}
+
+.portfolio-item-actions .remove-portfolio-button {
+  color: #a61b1b;
+}
+
+.portfolio-message,
+.portfolio-empty {
+  max-width: 1100px;
+  margin: 0.8rem auto;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+}
+
+.portfolio-message.success {
+  background: #e7f6ec;
+  color: #176b3a;
+}
+
+.portfolio-message.error {
+  background: #fff0f0;
+  color: #a61b1b;
+}
+
+.portfolio-empty {
+  box-sizing: border-box;
+  border: 1px dashed #cbd4e2;
+  color: #657187;
+}
+
+.portfolio-error {
+  color: #a61b1b;
+}
+
+@media (max-width: 720px) {
+  .creator-portfolio-header,
+  .portfolio-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .portfolio-upload-form,
+  .portfolio-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image-editor {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
