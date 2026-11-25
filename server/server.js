@@ -12,10 +12,17 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
+const allowedOrigins = new Set([
+  ...(process.env.CLIENT_URL || 'http://localhost:3000')
+    .split(',')
+    .map(origin => origin.trim())
+    .filter(Boolean),
+  'https://brandfluencemini.netlify.app'
+]);
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: [...allowedOrigins],
   credentials: true
 }));
 app.use(express.json());

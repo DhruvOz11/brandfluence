@@ -34,7 +34,10 @@ const CreatorSignup = () => {
       });
       alert(response.data.message);
     } catch (err) {
-      alert(err.response.data.error);
+      alert(
+        err.response?.data?.error
+        || 'Unable to reach the server. Please try again later.'
+      );
     }
   };
 

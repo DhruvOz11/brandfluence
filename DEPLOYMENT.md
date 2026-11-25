@@ -57,7 +57,7 @@ The instructions below use one private GitHub repository for both deploys.
    | `MONGO_URI` | Your MongoDB connection string |
    | `JWT_SECRET` | A long, random secret |
    | `ADMIN_PASSWORD` | A strong, unique admin password |
-   | `CLIENT_URL` | Your Netlify site origin, e.g. `https://your-site.netlify.app` |
+   | `CLIENT_URL` | Your Netlify site origin, e.g. `https://brandfluencemini.netlify.app` |
 
    Generate a random secret locally in PowerShell with:
 
@@ -89,7 +89,9 @@ step.
 
 4. Deploy the site and copy its `https://...netlify.app` origin. Set Railway's
    `CLIENT_URL` to that exact origin (no trailing slash), then redeploy/restart
-   the Railway service.
+   the Railway service. The API also allows
+   `https://brandfluencemini.netlify.app` by default; if you use a different
+   Netlify URL or a custom domain, add its exact origin to `CLIENT_URL`.
 5. Test signup/login, an API-backed page, and opening a page directly by URL.
    The included `client/public/_redirects` sends React Router paths back to the
    app.
