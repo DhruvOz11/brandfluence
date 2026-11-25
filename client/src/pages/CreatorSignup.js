@@ -36,7 +36,9 @@ const CreatorSignup = () => {
     } catch (err) {
       alert(
         err.response?.data?.error
-        || 'Unable to reach the server. Please try again later.'
+        || (err.response
+          ? 'Signup failed. Please try again.'
+          : 'Unable to reach the server. Please try again later.')
       );
     }
   };

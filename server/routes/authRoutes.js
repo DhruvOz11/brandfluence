@@ -105,7 +105,7 @@ router.post('/signup/creator', upload.single('image'), async (req, res) => {
       role: 'creator', // Explicitly set role
       instagramProfile,
       followers,
-      image: req.file.path,
+      image: `uploads/${req.file.filename}`,
       description,
       charges,
       city,

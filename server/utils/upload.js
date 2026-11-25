@@ -1,13 +1,17 @@
+const fs = require('fs');
 const multer = require('multer');
 const path = require('path');
 
-// Set up storage for uploaded files
+const uploadsDirectory = path.join(__dirname, '..', 'uploads');
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads/'); // Save files in the 'uploads' folder
+    fs.mkdir(uploadsDirectory, { recursive: true }, error => {
+      cb(error, uploadsDirectory);
+    });
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname)); // Rename file to avoid conflicts
+    cb(null, Date.now() + path.extname(file.originalname));
   },
 });
 
@@ -20,21 +24,6 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-// Initialize multer with the configuration
 const upload = multer({ storage, fileFilter });
-
-// // In your upload middleware
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, 'uploads/');
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, Date.now() + '-' + file.originalname);
-//   }
-  
-// });
-
-
-// const upload = multer({ storage: storage });
 
 module.exports = upload;
